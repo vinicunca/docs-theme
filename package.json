@@ -21,7 +21,7 @@
     "tokens.config.ts"
   ],
   "scripts": {
-    "prepare": "nuxi prepare && nuxi prepare .starters/default",
+    "prepare": "simple-git-hooks && nuxi prepare && nuxi prepare .starters/default",
     "dev": "nuxi dev .starters/default",
     "build": "nuxi build .starters/default",
     "generate": "nuxi generate .starters/default",
