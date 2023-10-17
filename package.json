@@ -1,0 +1,55 @@
+{
+  "name": "@vinicunca/docs-theme",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.9.0",
+  "author": "praburangki<https://github.com/praburangki>",
+  "license": "MIT",
+  "files": [
+    "app",
+    "app.config.ts",
+    "app.vue",
+    "assets",
+    "components",
+    "composables",
+    "layouts",
+    "nuxt.config.ts",
+    "nuxt.schema.ts",
+    "plugins",
+    "server",
+    "tokens.config.ts"
+  ],
+  "scripts": {
+    "prepare": "nuxi prepare && nuxi prepare .starters/default",
+    "dev": "nuxi dev .starters/default",
+    "build": "nuxi build .starters/default",
+    "generate": "nuxi generate .starters/default",
+    "preview": "nuxi preview .starters/default",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
+    "@nuxt/devtools": "^0.8.5",
+    "@types/node": "^20.8.6",
+    "@unocss/eslint-config": "^0.56.5",
+    "@unocss/nuxt": "^0.56.5",
+    "@vinicunca/eslint-config": "^2.0.0-beta.9",
+    "@vinicunca/perkakas": "^0.0.10",
+    "eslint": "^8.51.0",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^15.0.1",
+    "nuxt": "^3.7.4",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2",
+    "unocss": "^0.56.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx --no-install commitlint --edit \"$1\""
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
